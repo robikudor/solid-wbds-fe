@@ -1,0 +1,131 @@
+body {
+  font-family: $nunito-sans;
+  font-size: 14px;
+
+  &.menu-open {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+  }
+}
+
+pre {
+  margin: 0;
+  padding: 100px 0 20px 0;
+  max-width: 100vw;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+a {
+  color: $black;
+
+  &:hover {
+    color: $dark;
+  }
+
+  &.red {
+    color: $red;
+
+    &:hover {
+      color: $red-1;
+    }
+  }
+}
+
+//toast
+
+.toasted-container,
+.top-right {
+  top: 11% !important;
+  right: 1% !important;
+}
+
+.toasted {
+  border-radius: 0 !important;
+  box-shadow: 0 2px 66px 0 rgba(32, 32, 32, 0.2) !important;
+  font-size: $text-xs !important;
+  min-width: 200px;
+
+  &.toasted-primary {
+    &.error,
+    &.success {
+      color: $black;
+      background-color: $white !important;
+      min-height: 65px !important;
+    }
+  }
+}
+
+//auth-pages
+.auth-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr;
+
+  padding: 25% $margin-mobile 0 $margin-mobile;
+
+  @media screen and (min-width: $screen-width-sm) {
+    grid-template-columns: repeat(7, 1fr);
+  }
+
+  &.register {
+    padding: 90px $margin-mobile;
+  }
+}
+
+//square-element
+.square-elem {
+  position: relative;
+  height: 0;
+  width: 100%;
+  padding-bottom: 100%;
+
+  .content {
+    position: absolute;
+    inset: 0 0 0 0;
+  }
+}
+
+//tabs
+.tabs {
+  display: flex;
+  gap: 40px;
+  font-size: $text-sm;
+  border-bottom: 1px solid $dark-gray-2;
+
+  .tab {
+    cursor: pointer;
+    text-align: center;
+    padding: 12px;
+    margin-bottom: -1px;
+    width: 195px;
+
+    &.active {
+      color: $red;
+      border-bottom: 2px solid $red;
+    }
+  }
+}
+
+//input columns
+.input-columns-2 {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+
+  @media screen and (min-width: $screen-width-lg) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-column-gap: 40px;
+  }
+
+  @media screen and (min-width: $screen-width-sm) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-column-gap: 20px;
+  }
+}
+
+.ellipsis-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

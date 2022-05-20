@@ -1,0 +1,209 @@
+.multiselect-container {
+  &.pb-20 {
+    padding-bottom: 20px;
+  }
+
+  .multiselect {
+    width: 100%;
+    color: $black;
+
+    .multiselect__tags {
+      background-color: #fff1f100;
+    }
+
+    &:hover {
+      .multiselect__placeholder {
+        color: $black;
+      }
+
+      .selected-result {
+        .label {
+          color: $black;
+        }
+      }
+
+      .multiselect__tags {
+        border-bottom: 1px solid $black;
+      }
+
+      .multiselect__select {
+        &:before {
+          border: solid $black;
+          border-width: 0 1px 1px 0;
+          display: inline-block;
+          padding: 3px;
+        }
+      }
+    }
+
+    &.multiselect--active {
+      .multiselect__tags {
+        padding: 8px 40px 0 0;
+      }
+
+      .multiselect__placeholder {
+        display: inline-block;
+      }
+    }
+
+    &.multiselect--disabled {
+      .multiselect__select {
+        background-color: $dark-gray-2;
+        border-bottom: 1px solid $dark-gray-2;
+        &:before {
+          border: solid $dark-gray;
+          border-width: 0 1px 1px 0;
+          display: inline-block;
+          padding: 3px;
+        }
+      }
+
+      .multiselect__tags {
+        border: none;
+        border-bottom: 1px solid $dark-gray-2;
+        background-color: $dark-gray-2;
+      }
+
+      .multiselect__placeholder {
+        color: $dark-gray;
+      }
+    }
+
+    .multiselect__single,
+    .multiselect__input {
+      color: $black;
+      font-family: $nunito-sans;
+      font-size: 14px;
+      margin-top: 0;
+      padding: 0;
+      background-color: #fff1f100;
+    }
+
+    .multiselect__input {
+      margin-top: 13px;
+    }
+
+    .multiselect__placeholder {
+      text-align: start;
+      color: $dark-gray;
+      font-family: $nunito-sans;
+      white-space: nowrap;
+      width: 100%;
+      margin: 3px 0 0 0;
+      transition: color 0.3s ease;
+      padding-top: 12px;
+    }
+
+    .multiselect__select {
+      top: 9px;
+      padding: 0;
+
+      &:before {
+        border: solid $dark-gray;
+        border-width: 0 1px 1px 0;
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(45deg);
+        top: 26%;
+      }
+    }
+
+    .multiselect__tags {
+      width: 100%;
+      border-radius: 0;
+      border: none;
+      border-bottom: 1px solid $dark-gray;
+      height: 47px;
+      padding: 8px 40px 0 0;
+      transition: border 0.3s ease;
+    }
+
+    .multiselect__content-wrapper {
+      margin-top: 10px;
+      border-radius: 0;
+      background-color: $white;
+      border: 1px solid $black;
+
+      .multiselect__element {
+        font-family: $nunito-sans;
+        font-size: 14px;
+        margin-top: 2px;
+
+        .multiselect__option--highlight {
+          background-color: $white;
+          color: $red;
+        }
+
+        .multiselect__option--selected {
+          background-color: #fff1f1;
+          color: $red;
+          font-weight: unset;
+        }
+      }
+    }
+
+    .selected-result {
+      font-family: $nunito-sans;
+      font-size: 14px;
+      margin-top: -5px;
+      line-height: 18px;
+
+      .label {
+        color: $dark-gray;
+        font-size: 12px;
+        padding-top: 2px;
+        transition: color 0.3s ease;
+
+        &.large-label {
+          font-size: 14px;
+          padding-top: 9px;
+        }
+      }
+
+      .option {
+        color: $black;
+
+        & + .option:last-child {
+          &::before {
+            content: ', ';
+          }
+        }
+        &:nth-of-type(n + 2):not(:last-child) {
+          &::before {
+            content: ', ';
+          }
+        }
+      }
+    }
+
+    &.multiple-search {
+      .multiselect__input {
+        border-radius: 0px;
+        margin-top: -20px;
+        background-color: $light-gray-4;
+      }
+    }
+  }
+
+  &.invalid {
+    .multiselect {
+      .multiselect__select {
+        background-color: #fff1f100;
+      }
+
+      .multiselect__tags {
+        border: none;
+        border-bottom: 1px solid $red-2;
+      }
+
+      .multiselect__placeholder {
+        color: $red-2;
+      }
+    }
+  }
+
+  .error {
+    font-size: 12px;
+    color: $red-2;
+  }
+}

@@ -1,0 +1,17 @@
+@mixin custom-padding {
+  @media screen and (min-width: $screen-width-lg) {
+    padding-bottom: 65.55%;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 65.66%;
+  }
+
+  @media screen and (min-width: 1700px) {
+    padding-bottom: 65.77%;
+  }
+
+  @media screen and (min-width: 2000px) {
+    padding-bottom: 65.88%;
+  }
+}

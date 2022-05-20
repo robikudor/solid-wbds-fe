@@ -1,0 +1,174 @@
+button {
+  cursor: pointer;
+  min-height: 38px;
+  min-width: 208px;
+  padding: 0 20px;
+  border-radius: 0;
+  transition: all 0.3s;
+
+  &.w-100 {
+    width: 100%;
+  }
+
+  &.primary {
+    border: 1px solid $black;
+    background-color: $black;
+    color: $white;
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        border: 1px solid $dark;
+        background-color: $dark;
+      }
+    }
+
+    &.red {
+      border: 1px solid $red;
+      color: $white;
+      background-color: $red;
+
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          border: 1px solid $red-1;
+          background-color: $red-1;
+        }
+
+        &:focus {
+          border: 1px solid $red-1;
+          background-color: $red-1;
+        }
+      }
+
+      &:disabled {
+        opacity: 0.8;
+        cursor: not-allowed;
+        pointer-events: all;
+
+        &:hover {
+          border: 1px solid $red;
+          background-color: $red;
+        }
+      }
+    }
+  }
+
+  &.secondary {
+    border: 1px solid $black;
+    background-color: #ffffff00;
+    color: $black;
+
+    &.white-bg {
+      background-color: #ffffff;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        border: 1px solid $black;
+        background-color: $black;
+        color: $white;
+      }
+    }
+
+    &.red {
+      border: 1px solid $red;
+      color: $red;
+
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          background-color: $red;
+          color: $white;
+        }
+
+        &:focus {
+          background-color: $red;
+          color: $white;
+        }
+      }
+    }
+  }
+
+  &.danger {
+    border: 1px solid $red;
+    background-color: $white;
+    color: $red;
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        border: 1px solid $red;
+        background-color: $red;
+        color: $white;
+      }
+
+      &:focus {
+        background-color: $white;
+        color: $red;
+      }
+    }
+  }
+
+  &.small {
+    min-height: 24px;
+    min-width: 125px;
+    border: 1px solid $red;
+    background-color: $red;
+    color: $white;
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        border: 1px solid $red-1;
+        background-color: $red-1;
+      }
+
+      &:focus {
+        border: 1px solid $red;
+        background-color: $red;
+      }
+    }
+  }
+
+  &.large {
+    min-width: 282px;
+  }
+
+  &.link {
+    min-height: unset;
+    min-width: unset;
+    padding: 0;
+    border-radius: 0;
+    border: 0;
+    background-color: #ffffff00;
+    transition: all 0.3s;
+    color: $red;
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        color: $red-1;
+      }
+
+      &:focus {
+        color: $red-1;
+      }
+    }
+
+    &.black {
+      color: $black;
+
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          color: $dark;
+        }
+
+        &:focus {
+          color: $dark;
+        }
+      }
+    }
+  }
+
+  &:disabled {
+    pointer-events: none;
+    color: $white;
+    border: 1px solid $light-gray-3;
+    background-color: $light-gray-3;
+  }
+}
